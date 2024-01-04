@@ -1,0 +1,5 @@
+com\humza\backendservice\client\IKEAFeignClient.class
+com\humza\backendservice\controller\Controller.class
+com\humza\backendservice\service\impl\ServiceImpl.class
+com\humza\onetradeinservice\BackendServiceApplication.class
+com\humza\backendservice\service\Service.class
