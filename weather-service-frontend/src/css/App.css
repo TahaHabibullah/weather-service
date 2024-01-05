@@ -1,38 +1,25 @@
 .App {
-  text-align: center;
-  padding: 0;
-  margin: 0;
+  overflow-x: hidden;
+  height: '100%';
+  width: '100%';
 }
 
 .App-header {
-  background-color: #1c1e22;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-color: #14161f;
   font-size: calc(10px + 2vmin);
-  color: #acacac;
+  color: #dddddd;
 }
 
 .accordion-button {
-  background-color: #282b31 !important;
-  color: #acacac !important;
-  justify-content: center;
+  background-color: #232935 !important;
+  color: #dddddd !important;
+  font-size: 30px !important;
 }
 
 .accordion-body {
-  background-color: #2e333b;
+  background-color: #14161f;
   font-size: 20px;
-  color: #acacac
-}
-
-.accordion-button:focus {
-  box-shadow: none;
-}
-
-.accordion-button:not(.collapsed) {
-  color: white;
+  color: #dddddd
 }
 
 .form-control::placeholder {

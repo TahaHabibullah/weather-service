@@ -6,10 +6,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const App = () => {
   return (
       <div className="App">
-        <header className="App-header">
-          <h1>Weather Service</h1>
+        <div className="App-header">
           <Forecast/>
-        </header>
+        </div>
       </div>
   );
 };

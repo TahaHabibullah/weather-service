@@ -16,16 +16,16 @@ const HourlyCarousel = ({ weatherData }) => {
       const items = hourly.slice(startIndex, endIndex);
 
       carouselItems.push(
-        <Carousel.Item key={i}>
-          <Card style={{backgroundColor: '#2e333b', fontSize: '20px', color: '#acacac'}}>
+        <Carousel.Item key={i} style={{paddingLeft: '10%', paddingRight: '10%', paddingBottom: '35px', paddingTop: '10px'}}>
+          <Card style={{backgroundColor: '#252c38', color: '#dddddd', outlineWidth: '2px', outlineStyle: 'solid', outlineColor: '#acacac'}}>
             <Card.Body>
               <Row>
                 {items.map((data, index) => (
                   <Col key={index} sm={6} md={3}>
-                    <Card.Header className='mb-4' style={{textAlign: 'center', backgroundColor: '#282b31'}}>
+                    <Card.Header className='mb-4' style={{textAlign: 'center', fontSize: '20px', backgroundColor: '#14161f'}}>
                       {translateTime(data.startTime)}
                     </Card.Header>
-                    <Card.Body>
+                    <Card.Body style={{textAlign: 'center', fontSize: '30px'}}>
                       <Row>
                         <Col>
                           <Card.Text className={getIcon(data.shortForecast, data.name)}/>

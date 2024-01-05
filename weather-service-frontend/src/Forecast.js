@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 import WeatherCards from './WeatherCards';
 import HourlyCarousel from './HourlyCarousel';
 
@@ -27,31 +27,52 @@ const Forecast = () => {
   }
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <Form.Group className="mb-3" controlId="zipcode">
-        <Form.Control
-          style={{backgroundColor: '#2e333b', color: 'white', width: '50%', align: 'center', display: 'inline-block'}}
-          type="text"
-          placeholder="Enter ZIP Code"
-          name="zipcode"
-          value={zipcode}
-          onChange={(e) => setZipCode(e.target.value)}
-          required
-        />
-        <Button variant="outline-primary" type="submit">
-            Submit
-        </Button>
-      </Form.Group>
+    <div>
+        <center>
+          <Form onSubmit={handleSubmit} style={{width: '30%'}}>
+            <Form.Group className="mb-3" controlId="zipcode">
+              <Form.Control
+                style={{backgroundColor: '#252c38', color: 'white', display: 'inline-block'}}
+                type="text"
+                placeholder="Enter ZIP Code"
+                name="zipcode"
+                value={zipcode}
+                onChange={(e) => setZipCode(e.target.value)}
+                required
+              />
+            </Form.Group>
+          </Form>
+        </center>
+      
       { response ? (
         <div>
-          <strong>Forecast in {response.forecast.loc.city}, {response.forecast.loc.state}</strong>
-          <HourlyCarousel weatherData={response}/>
-          <WeatherCards weatherData={response}/>
+          <div>
+            <center>
+              Forecast in {response.forecast.loc.city}, {response.forecast.loc.state}
+            </center>
+          </div>
+          <div>
+            <strong style={{paddingLeft: '10%', paddingRight: '10%'}}>
+              Hourly
+            </strong>
+          </div>
+          <div>
+            <HourlyCarousel weatherData={response}/>
+          </div>
+          <div>
+            <strong style={{paddingLeft: '20%', paddingRight: '20%'}}>
+              Next 7 Days
+            </strong>
+          </div>
+          <div>
+            <WeatherCards weatherData={response}/>
+          </div>
         </div>
       ) : (
         <p></p>
       )}
-    </Form>
+    </div>
+    
   )
 };
 
